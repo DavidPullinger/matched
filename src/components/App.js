@@ -8,6 +8,8 @@ import {
 } from 'react-router-dom';
 import UserFeed from './Feed/UserFeed';
 import GroupFeed from './Feed/GroupFeed';
+import Profile from './Profile/Profile';
+import userProfile from '../assets/userProfile.jpg';
 
 function App() {
 
@@ -19,6 +21,10 @@ function App() {
           
           <Route path='/groups'>
             <GroupFeed/>
+          </Route>
+
+          <Route path='/profile'>
+            <Profile/>
           </Route>
 
           <Route path='/'>
@@ -35,12 +41,16 @@ function Navigation(props) {
 
   return (
     <nav>
-      <ul>
+      <ul class="main-nav">
         <li>
           <Link to="/users">User Feed</Link>
         </li>
         <li>
           <Link to="/groups">Group Feed</Link>
+        </li>
+        <li className="push">
+            <img alt="profile pic" src={userProfile}></img>
+            <Link to="/profile">My Profile</Link>
         </li>
       </ul>
     </nav>
