@@ -1,11 +1,11 @@
 import {useState} from 'react';
 
-function UserFeed(){
+function GroupFeed(){
     return(
         <div>
-            USER FEED GO SKRRRRRR
+            GROUP FEED GO SKRRRRRR
         </div>
     )
 }
 
-export default UserFeed;
+export default GroupFeed;

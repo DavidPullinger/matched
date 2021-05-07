@@ -1,30 +1,50 @@
-import { useState } from 'react';
 import './App.css';
+import { useState} from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+} from 'react-router-dom';
+import UserFeed from './Feed/UserFeed';
+import GroupFeed from './Feed/GroupFeed';
 
 function App() {
-  const [todos, setTodos] = useState([
-    {
-    text: "Read books",
-    done: true
-  },
-  {
-    text: "Do nothing",
-    done: false
-  }
 
-])
-
-  
   return (
-    <div className="App">
-      <h1>To Do List</h1>
-      {todos.map((todo)=>{
-        return(<div><p>{todo.text}</p><p>{todo.done? "Done": "Not done"}</p></div>)
-      })}
-      <button onClick={()=>setTodos([{text: "Fuck bitches", done: true}])}>
-        Click me</button>
+    <div className='App'>
+      <Router>
+        <Navigation/>
+        <Switch>
+          
+          <Route path='/groups'>
+            <GroupFeed/>
+          </Route>
+
+          <Route path='/'>
+            <UserFeed/>
+          </Route>
+          
+        </Switch>
+      </Router>
     </div>
   );
+}
+
+function Navigation(props) {
+
+  return (
+    <nav>
+      <ul>
+        <li>
+          <Link to="/users">User Feed</Link>
+        </li>
+        <li>
+          <Link to="/groups">Group Feed</Link>
+        </li>
+      </ul>
+    </nav>
+  )
 }
 
 export default App;
