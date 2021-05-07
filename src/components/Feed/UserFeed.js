@@ -1,8 +1,9 @@
+import './UserFeed.css';
 
 function UserFeed(){
     return(
-        <div>
-            USER FEED GO SKRRRRRR
+        <div className="wrapper">
+            <h1>User Feed</h1>
         </div>
     )
 }

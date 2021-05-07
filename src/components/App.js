@@ -1,5 +1,4 @@
 import './App.css';
-import { useState} from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,27 +9,31 @@ import UserFeed from './Feed/UserFeed';
 import GroupFeed from './Feed/GroupFeed';
 import Profile from './Profile/Profile';
 import userProfile from '../assets/userProfile.jpg';
+import { Particles } from 'react-particles-js';
+import particleData from "./particlesConfig";
+import logo from "../assets/logo.png";
 
 function App() {
 
   return (
     <div className='App'>
+      <Particles className="particles" params={particleData} />
       <Router>
-        <Navigation/>
+        <Navigation />
         <Switch>
-          
+
           <Route path='/groups'>
-            <GroupFeed/>
+            <GroupFeed />
           </Route>
 
           <Route path='/profile'>
-            <Profile/>
+            <Profile />
           </Route>
 
           <Route path='/'>
-            <UserFeed/>
+            <UserFeed />
           </Route>
-          
+
         </Switch>
       </Router>
     </div>
@@ -41,7 +44,10 @@ function Navigation(props) {
 
   return (
     <nav>
-      <ul class="main-nav">
+      <ul className="main-nav">
+        <li className = "logo">
+          <img src={logo}></img>
+        </li>
         <li>
           <Link to="/users">User Feed</Link>
         </li>
@@ -49,8 +55,8 @@ function Navigation(props) {
           <Link to="/groups">Group Feed</Link>
         </li>
         <li className="push">
-            <img alt="profile pic" src={userProfile}></img>
-            <Link to="/profile">My Profile</Link>
+          <img alt="profile pic" src={userProfile}></img>
+          <Link to="/profile">My Profile</Link>
         </li>
       </ul>
     </nav>

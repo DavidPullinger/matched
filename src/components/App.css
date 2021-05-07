@@ -7,10 +7,14 @@ nav{
   box-shadow: 0 8px 14px 0 rgb(0 0 0 / 4%);
 }
 
+.logo img{
+  width: 150px
+}
+
 .main-nav {
   display: flex;
   list-style: none;
-  font-size: 1em;
+  font-size: 20px;
   margin: 0;
   padding-left: 0px;
 }
@@ -29,11 +33,26 @@ nav{
 
 li {
   display: flex;
-  padding: 20px;
+  padding: 0 20px 0 20px;
+  border-right: #f8f8ff 2px solid;
+  margin: 10px 0 10px 0;
+  transition: transform .2s;
 }
 
+li:hover {
+  transform: scale(1.1); 
+}
 a {
   text-decoration: none;
-  color: #1D3557;
+  color: #f8f8ff;
   margin: auto;
+}
+
+.particles{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
 }

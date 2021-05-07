@@ -23,3 +23,9 @@
     left: 0; 
     top: 0;
 }
+
+.detailsWrapper{
+    padding-top: 120px;
+    padding-left: 25px;
+    font-size: 20px;
+}
