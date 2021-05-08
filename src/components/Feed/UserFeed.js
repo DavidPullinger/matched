@@ -5,19 +5,57 @@ import './UserFeed.css';
 function UserFeed(props) {
     const [users, setUsers] = useState([
         {
-            name: "John Doe 2",
-            email: "johndoe2@email.com",
-            interests: ['drinking coffee', 'backgammon',]
+            name: "David Pullinger",
+            email: "PLLDAV003@uct.ac.za",
+            interests: ['drinking coffee', 'backgammon','chess']
         },
         {
-            name: "John Doe 3",
-            email: "johndoe3@email.com",
-            interests: ['coding', 'backgammon',]
+            name: "Owen Venter",
+            email: "VNTOWE001@myuct.ac.za",
+            interests: ['coding', 'backgammon']
         },
         {
-            name: "John Doe 1",
-            email: "johndoe1@email.com",
-            interests: ['chess', 'drinking tea']
+            name: "Nivan Poken",
+            email: "PKNNIV001@myuct.ac.za",
+            interests: ['chess', 'drinking tea','baseball']
+        },
+        {
+            name: "Chloe Davies",
+            email: "DVSCHL001@myuct.ac.za",
+            interests: ['chess','creative writing','macrame','photography']
+        },
+        {
+            name: "Meriam Elabor",
+            email: "ELBMER012@myuct.ac.za",
+            interests: ['coding','macrame','drinking tea']
+
+        },
+        {
+            name: "Melissa Slaymaker",
+            email: "SLYMEL024@myUCT.ac.za",
+            interests: ['collecting artwork','ceramics','chess','drinking coffee']
+
+        },
+        {
+            name: "Zandile Keebine",
+            email: "KBNZAN001@myuct.ac.za",
+            interests: ['gardening','hiking','chess','photography']
+        },
+        {
+            name: "Micaela Dale",
+            email: "DLXMIC001@myuct.ac.za",
+            interests: ['reading','animals','drinking tea']
+
+        },
+        {
+            name: "John smith",
+            email: "SMTJOH001@myuct",
+            interests: ['hiking', 'creative writing','animals','drinking coffee']
+        },
+        {
+            name: "Jane deKlerk",
+            email: "DKLJAN@myuct.ac.za",
+            interests: ['collecting artwork', 'ceramics','chess','tennis']
         },
     ])
 
