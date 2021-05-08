@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import userProfile from '../../assets/userProfile.jpg'
+import chatIcon from '../../assets/ChatIcon.png'
 import './UserFeed.css';
 
 function UserFeed(props) {
@@ -82,17 +83,26 @@ function useInterests(currentUser, user) {
 
 function UserCard(props) {
     const count = useInterests(props.currentUser, props.user);
+
+
     return (
-        <div className="cardDetails">
-            <div><img alt="profile pic" src={userProfile}></img></div>
-            <div><p>Name:</p><p>{props.user.name}</p></div>
-            <div><p>Email:</p><p>{props.user.email}</p></div>
-            <div>
-                <p>Interests you have in common:</p><p>{count}</p>
-            </div>
-            <div>
-                <p>Interests:</p>
-                <div className="interestList">{props.user.interests.map((interest) => { return <Interest interest={interest} /> })}</div>
+        <div>
+            <div className="cardDetails">
+                <div>
+                    <div><img alt="profile pic" src={userProfile}></img></div>
+                    <div><p>Name:</p><p>{props.user.name}</p></div>
+                    <div><p>Email:</p><p>{props.user.email}</p></div>
+                    <div>
+                        <p>Interests you have in common:</p><p>{count}</p>
+                    </div>
+                    <div>
+                        <p>Interests:</p>
+                        <div className="interestList">{props.user.interests.map((interest) => { return <Interest interest={interest} /> })}</div>
+                    </div>
+                </div>
+                <div className="chat">
+                    <img src={chatIcon}></img>
+                </div>
             </div>
         </div>
     )

@@ -11,6 +11,7 @@ import GroupFeed from './Feed/GroupFeed';
 import Profile from './Profile/Profile';
 import Signup from './SignUp/Signup';
 import Signin from './Signin/Signin';
+import Chat from './Chat/Chat';
 import userProfile from '../assets/userProfile.jpg';
 import { Particles } from 'react-particles-js';
 import particleData from "./particlesConfig";
@@ -37,6 +38,10 @@ function App() {
 
               <Route path='/groups'>
                 <GroupFeed />
+              </Route>
+
+              <Route path='/chat'>
+                <Chat />
               </Route>
 
               <Route path='/profile'>
@@ -75,6 +80,9 @@ function Navigation(props) {
         </li>
         <li id="groups">
           <Link to="/groups">Group Feed</Link>
+        </li>
+        <li id="chat">
+          <Link to="/chat">Chat</Link>
         </li>
         <li id="profile" className="push">
           <img alt="profile pic" src={userProfile}></img>
