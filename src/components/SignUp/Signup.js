@@ -180,7 +180,7 @@ class Signup extends Component {
                             </div>
                             <div className="lh-copy newCenter mt3">
                                 <p className="mb0">Already have an account?</p>
-                                <p href="#0" className="white-80 ph3 pv2 input-reset ba b--white bg-transparent grow pointer f5 dib">Sign in</p>
+                                <p href="#0" onClick={()=> this.props.redirect()} className="white-80 ph3 pv2 input-reset ba b--white bg-transparent grow pointer f5 dib">Sign in</p>
                             </div>
                         </div>
                     </main>

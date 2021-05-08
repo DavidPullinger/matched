@@ -25,7 +25,7 @@ function App() {
     email: "wckjoh002@myuct.ac.za",
     interests: ['coding', 'drinking tea', 'coffee', 'backgammon',]
   });
-  const [signedIn, setSignedIn] = useState(true);
+  const [signedIn, setSignedIn] = useState(false);
 
   return (
     <div className='App'>
@@ -55,7 +55,7 @@ function App() {
           </ReactCSSTransitionGroup>
         </Router>
         :
-        <Signin />
+        <Signin setSignedIn={setSignedIn}/>
       }
 
     </div>

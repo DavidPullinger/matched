@@ -25,7 +25,7 @@ class Signin extends Component {
         // expression for email format
         let mailFormat = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         // destructure variables from state
-        let {email,} = this.state;
+        let { email, } = this.state;
         let errorMessage = "";
 
         // check if email matches the format
@@ -100,15 +100,15 @@ class Signin extends Component {
 
     render() {
         return (
-          
+
             <article className="br3 ba dark-gray b--black-10 mv4 w-50-m w-25-l mw6 shadow-5 center">
-            <link rel="stylesheet" href="https://unpkg.com/tachyons@4/css/tachyons.min.css"></link>
+                <link rel="stylesheet" href="https://unpkg.com/tachyons@4/css/tachyons.min.css"></link>
                 <div>
                     <main className="pa4 signUpWrapper white-80">
                         <div className="measure">
                             <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
                                 <legend className="f3 fw6 ph0 mh0">Sign In</legend>
-                                
+
                                 <div className="mt3">
                                     <label className="db fw6 lh-copy f5" htmlFor="email-address">Email</label>
                                     <input onChange={this.onEmailChange} className="pa2 input-reset ba bg-transparent white b--white w-100" type="email" name="email-address" id="email-address" />
@@ -117,11 +117,11 @@ class Signin extends Component {
                                     <label className="db fw6 lh-copy f5" htmlFor="password">Password</label>
                                     <input onChange={this.onPasswordChange} className="pa2 input-reset ba bg-transparent white b--white w-100" type="password" name="password" id="password" />
                                 </div>
-                                
+
                             </fieldset>
                             <p className="ma1 red" id="error"></p>
                             <div className="newCenter ">
-                                <input id="signup_btn" onClick={this.onSumbitSignUp} className="white-80 ph3 pv2 input-reset ba b--white bg-transparent grow pointer f5 dib" type="submit" value="Sign In" />
+                                <input id="signup_btn" onClick={() => this.props.setSignedIn(true)} className="white-80 ph3 pv2 input-reset ba b--white bg-transparent grow pointer f5 dib" type="submit" value="Sign In" />
                             </div>
                             <div id='loaderContainer' className='dn'>
                                 <div className='pt1' id="loader">
