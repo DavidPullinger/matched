@@ -2,7 +2,6 @@ import { useState } from 'react'
 import userProfile from '../../assets/userProfile.jpg'
 import chatIcon from '../../assets/ChatIcon.png'
 import './UserFeed.css';
-<<<<<<< Updated upstream
 import pp1 from '../../assets/profile4.jpg';
 import pp2 from '../../assets/profile8.jpg';
 import pp3 from '../../assets/profile6.jpg';
@@ -14,9 +13,6 @@ import pp8 from '../../assets/profile7.jpg';
 import pp9 from '../../assets/profile9.jpg';
 import pp10 from '../../assets/profile10.jpg';
 
-=======
-import { useHistory } from 'react-router';
->>>>>>> Stashed changes
 
 function UserFeed(props) {
     const [users, setUsers] = useState([
