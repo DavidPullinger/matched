@@ -12,7 +12,7 @@ import pp7 from '../../assets/profile1.png';
 import pp8 from '../../assets/profile7.jpg';
 import pp9 from '../../assets/profile9.jpg';
 import pp10 from '../../assets/profile10.jpg';
-
+import { useHistory } from 'react-router';
 
 function UserFeed(props) {
     const [users, setUsers] = useState([
@@ -114,7 +114,7 @@ function UserCard(props) {
     return (
         <div>
             <div className="cardDetails">
-                    <div><img alt="profile pic" src={userProfile}></img></div>
+                    <div><img alt="profile pic" src={props.user.pp}></img></div>
                     <div><p>Name:</p><p>{props.user.name}</p></div>
                     <div><p>Email:</p><p>{props.user.email}</p></div>
                     <div>
