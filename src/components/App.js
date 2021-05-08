@@ -21,9 +21,9 @@ var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 
 function App() {
   const [currentUser, setCurrentUser] = useState({
-    name: "John Doe",
-    email: "johndoe@email.com",
-    interests: ['coding', 'drinking tea', 'drinking coffee', 'backgammon',]
+    name: "John Wick",
+    email: "wckjoh002@myuct.ac.za",
+    interests: ['coding', 'drinking tea', 'coffee', 'backgammon',]
   });
   const [signedIn, setSignedIn] = useState(true);
 
