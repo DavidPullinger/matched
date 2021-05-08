@@ -43,3 +43,27 @@
 .detailsWrapper div p{
     padding-left: 20px;
 }
+
+.interestList{
+    box-shadow: none !important;
+}
+
+.interestWrapper{
+    border-radius: .5rem;
+    background-color: #3f6292;
+    margin: 10px;
+    display: block;
+    text-align: center;
+    padding-right: 0px !important;
+}
+
+.interestWrapper p{
+    margin: auto;
+    padding: 0 5px 0 5px !important;
+}
+.plusWrapper{
+    cursor: pointer;
+}
+.plusWrapper p{
+    padding: 0 15px 0 15px !important;
+}

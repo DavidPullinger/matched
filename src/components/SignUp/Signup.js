@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './Signin.css';
+import './Signup.css';
 
-class Signin extends Component {
+class Signup extends Component {
     constructor(props) {
         super();
         this.state = {
@@ -139,14 +139,21 @@ class Signin extends Component {
     render() {
         return (
           
-            <article style={{ backgroundColor: '#221e26' }} className="br3 ba dark-gray b--black-10 mv4 w-50-m w-25-l mw6 shadow-5 center">
+            <article className="br3 ba dark-gray b--black-10 mv4 w-50-m w-25-l mw6 shadow-5 center">
             <link rel="stylesheet" href="https://unpkg.com/tachyons@4/css/tachyons.min.css"></link>
                 <div>
                     <main className="pa4 signUpWrapper white-80">
                         <div className="measure">
                             <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
-                                <legend className="f3 fw6 ph0 mh0">Sign In</legend>
-                                
+                                <legend className="f3 fw6 ph0 mh0">Sign Up</legend>
+                                <div className="mt3">
+                                    <label className="db fw6 lh-copy f5" htmlFor="text">First name</label>
+                                    <input onChange={this.onFirstNameChange} className="pa2 input-reset ba bg-transparent white b--white w-100" type="text" name="firstname" id="firstname" />
+                                </div>
+                                <div className="mt3">
+                                    <label className="db fw6 lh-copy f5" htmlFor="text">Last name</label>
+                                    <input onChange={this.onLastNameChange} className="pa2 input-reset ba bg-transparent white b--white w-100" type="text" name="lastname" id="lastname" />
+                                </div>
                                 <div className="mt3">
                                     <label className="db fw6 lh-copy f5" htmlFor="email-address">Email</label>
                                     <input onChange={this.onEmailChange} className="pa2 input-reset ba bg-transparent white b--white w-100" type="email" name="email-address" id="email-address" />
@@ -155,22 +162,25 @@ class Signin extends Component {
                                     <label className="db fw6 lh-copy f5" htmlFor="password">Password</label>
                                     <input onChange={this.onPasswordChange} className="pa2 input-reset ba bg-transparent white b--white w-100" type="password" name="password" id="password" />
                                 </div>
-                                
+                                <div className="mt3">
+                                    <label className="db fw6 lh-copy f5" htmlFor="password">Re-enter Password</label>
+                                    <input onChange={this.onRePasswordChange} className="pa2 input-reset ba bg-transparent white b--white w-100" type="password" name="repassword" id="repassword" />
+                                </div>
                             </fieldset>
                             <p className="ma1 red" id="error"></p>
                             <div className="newCenter ">
-                                <input id="signup_btn" onClick={this.onSumbitSignUp} className="white-80 ph3 pv2 input-reset ba b--white bg-transparent grow pointer f5 dib" type="submit" value="Sign In" />
+                                <input id="signup_btn" onClick={this.onSumbitSignUp} className="white-80 ph3 pv2 input-reset ba b--white bg-transparent grow pointer f5 dib" type="submit" value="Sign Up" />
                             </div>
                             <div id='loaderContainer' className='dn'>
                                 <div className='pt1' id="loader">
                                     <div id="shadow"></div>
                                     <div id="box"></div>
                                 </div>
-                                <p id="loader-text" className="f4 pl3 pt2">Signing in...</p>
+                                <p id="loader-text" className="f4 pl3 pt2">Signing up...</p>
                             </div>
                             <div className="lh-copy newCenter mt3">
-                                <p className="mb0">Don't already have an account?</p>
-                                <p href="#0" className="white-80 ph3 pv2 input-reset ba b--white bg-transparent grow pointer f5 dib">Sign Up</p>
+                                <p className="mb0">Already have an account?</p>
+                                <p href="#0" className="white-80 ph3 pv2 input-reset ba b--white bg-transparent grow pointer f5 dib">Sign in</p>
                             </div>
                         </div>
                     </main>
@@ -180,4 +190,4 @@ class Signin extends Component {
     }
 }
 
-export default Signin;
+export default Signup;
