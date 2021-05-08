@@ -2,6 +2,7 @@ import { useState } from 'react'
 import userProfile from '../../assets/userProfile.jpg'
 import chatIcon from '../../assets/ChatIcon.png'
 import './UserFeed.css';
+<<<<<<< Updated upstream
 import pp1 from '../../assets/profile4.jpg';
 import pp2 from '../../assets/profile8.jpg';
 import pp3 from '../../assets/profile6.jpg';
@@ -13,6 +14,9 @@ import pp8 from '../../assets/profile7.jpg';
 import pp9 from '../../assets/profile9.jpg';
 import pp10 from '../../assets/profile10.jpg';
 
+=======
+import { useHistory } from 'react-router';
+>>>>>>> Stashed changes
 
 function UserFeed(props) {
     const [users, setUsers] = useState([
@@ -109,13 +113,11 @@ function useInterests(currentUser, user) {
 
 function UserCard(props) {
     const count = useInterests(props.currentUser, props.user);
-
+    const history = useHistory();
 
     return (
-<<<<<<< Updated upstream
         <div>
             <div className="cardDetails">
-                <div>
                     <div><img alt="profile pic" src={userProfile}></img></div>
                     <div><p>Name:</p><p>{props.user.name}</p></div>
                     <div><p>Email:</p><p>{props.user.email}</p></div>
@@ -126,22 +128,9 @@ function UserCard(props) {
                         <p>Interests:</p>
                         <div className="interestList">{props.user.interests.map((interest) => { return <Interest interest={interest} /> })}</div>
                     </div>
-                </div>
                 <div className="chat">
-                    <img src={chatIcon}></img>
+                    <img onClick={()=> history.push("/chat")} src={chatIcon}></img>
                 </div>
-=======
-        <div className="cardDetails">
-            <div><img alt="profile pic" src={props.user.pp}></img></div>
-            <div><p>Name:</p><p>{props.user.name}</p></div>
-            <div><p>Email:</p><p>{props.user.email}</p></div>
-            <div>
-                <p>Interests you have in common:</p><p>{count}</p>
-            </div>
-            <div>
-                <p>Interests:</p>
-                <div className="interestList">{props.user.interests.map((interest) => { return <Interest interest={interest} /> })}</div>
->>>>>>> Stashed changes
             </div>
         </div>
     )
